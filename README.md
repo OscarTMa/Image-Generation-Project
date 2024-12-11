@@ -74,7 +74,7 @@ Steps
 
 Clone the repository:
 
-git clone https://github.com/your-username/Image-Generation-Project.git
+git clone https://github.com/oscartma/Image-Generation-Project.git
 cd Image-Generation-Project
 
 Install dependencies:
@@ -169,6 +169,6 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Authors
 
-Your Name (your-email@example.com)
+oscartibaduiza@hotmail.com
 
 
