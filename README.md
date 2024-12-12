@@ -1,130 +1,113 @@
-Image Generation Project
+# Image Generation Project
 
-Table of Contents
+## Table of Contents
 
-Introduction
+1. [Description](#description)
+2. [Dataset](#dataset)
+3. [Models](#models)
+4. [Features](#features)
+5. [Installation](#installation)
+6. [Usage](#usage)
+7. [Project Structure](#project-structure)
+8. [Contributing](#contributing)
+9. [License](#license)
+10. [Authors](#authors)
 
-Dataset
-
-Models
-
-Features
-
-Installation
-
-Usage
-
-Project Structure
-
-Contributing
-
-License
-
-Authors
-
-Introduction
+## Description
 
 This project demonstrates various image generation techniques using the Fashion MNIST dataset. The implemented models include:
 
-GAN (Generative Adversarial Networks)
+- **GAN** (Generative Adversarial Networks)
+- **DCGAN** (Deep Convolutional GAN)
+- **CycleGAN**
 
-DCGAN (Deep Convolutional GAN)
+Additionally, advanced techniques such as **Transfer Learning** and **Fine Tuning** are applied. The project includes an interactive API for generating images and provides deployment solutions using Docker and Kubernetes.
 
-CycleGAN
+## Dataset
 
-Additionally, advanced techniques such as Transfer Learning and Fine Tuning are applied. The project includes an interactive API for generating images and provides deployment solutions using Docker and Kubernetes.
+The **Fashion MNIST dataset** consists of 70,000 grayscale images of size 28x28 pixels, categorized into 10 different classes of clothing items. It is widely used as a benchmark dataset for computer vision tasks. More information about the dataset can be found [here](https://github.com/zalandoresearch/fashion-mnist).
 
-Dataset
-
-The Fashion MNIST dataset consists of 70,000 grayscale images of size 28x28 pixels, categorized into 10 different classes of clothing items. It is widely used as a benchmark dataset for computer vision tasks. More information about the dataset can be found here.
-
-Models
+## Models
 
 The following models are implemented in this project:
 
-GAN: A basic architecture for generating images from noise using adversarial training.
+- **GAN**: A basic architecture for generating images from noise using adversarial training.
+- **DCGAN**: A convolutional variant of GAN, providing improved results for image data.
+- **CycleGAN**: Used for unpaired image-to-image translation tasks.
 
-DCGAN: A convolutional variant of GAN, providing improved results for image data.
+## Features
 
-CycleGAN: Used for unpaired image-to-image translation tasks.
+- **Image Generation**: Generate realistic clothing item images from random noise.
+- **Transfer Learning and Fine Tuning**: Leverage pre-trained models to enhance image generation quality.
+- **Interactive API**: Create and serve generated images via a REST API built with Flask or FastAPI.
+- **Deployment**: Containerize the application with Docker and orchestrate it using Kubernetes.
 
-Features
+## Installation
 
-Image Generation: Generate realistic clothing item images from random noise.
-
-Transfer Learning and Fine Tuning: Leverage pre-trained models to enhance image generation quality.
-
-Interactive API: Create and serve generated images via a REST API built with Flask or FastAPI.
-
-Deployment: Containerize the application with Docker and orchestrate it using Kubernetes.
-
-Installation
-
-Prerequisites
+### Prerequisites
 
 Ensure you have the following installed:
 
-Python 3.8+
+- **Python 3.8+**
+- **Docker**
+- **Kubernetes** (Minikube or similar for local testing)
 
-Docker
+### Steps
 
-Kubernetes (Minikube or similar for local testing)
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/Image-Generation-Project.git
+   cd Image-Generation-Project
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. (Optional) Set up a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-Steps
+## Usage
 
-Clone the repository:
+### Running Notebooks
 
-git clone https://github.com/oscartma/Image-Generation-Project.git
-cd Image-Generation-Project
+1. Navigate to the `notebooks/` directory.
+2. Open and run the desired notebook using Jupyter or Google Colab.
 
-Install dependencies:
+### Running the API
 
-pip install -r requirements.txt
+1. Navigate to the `src/api/` directory.
+2. Run the API server:
+   ```bash
+   python app.py
+   ```
+3. Access the API at `http://localhost:5000`.
 
-(Optional) Set up a virtual environment:
+### Deployment with Docker
 
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+1. Build the Docker image:
+   ```bash
+   docker build -t image-generation-api .
+   ```
+2. Run the container:
+   ```bash
+   docker run -p 5000:5000 image-generation-api
+   ```
 
-Usage
+### Deployment with Kubernetes
 
-Running Notebooks
+1. Apply the deployment and service configurations:
+   ```bash
+   kubectl apply -f kubernetes/deployment.yaml
+   kubectl apply -f kubernetes/service.yaml
+   ```
+2. Access the service using the provided Kubernetes endpoint.
 
-Navigate to the notebooks/ directory.
+## Project Structure
 
-Open and run the desired notebook using Jupyter or Google Colab.
-
-Running the API
-
-Navigate to the src/api/ directory.
-
-Run the API server:
-
-python app.py
-
-Access the API at http://localhost:5000.
-
-Deployment with Docker
-
-Build the Docker image:
-
-docker build -t image-generation-api .
-
-Run the container:
-
-docker run -p 5000:5000 image-generation-api
-
-Deployment with Kubernetes
-
-Apply the deployment and service configurations:
-
-kubectl apply -f kubernetes/deployment.yaml
-kubectl apply -f kubernetes/service.yaml
-
-Access the service using the provided Kubernetes endpoint.
-
-Project Structure
-
+```
 Image-Generation-Project/
 |
 ├── README.md
@@ -158,17 +141,18 @@ Image-Generation-Project/
 ├── requirements.txt                     # Python dependencies.
 ├── LICENSE
 └── .gitignore
+```
 
-Contributing
+## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for any proposed changes or features.
 
-License
+## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-Authors
+## Authors
 
-oscartibaduiza@hotmail.com
+- **Your Name ([Oscar Tibaduiza](mailto:oscartibaduiza@hotmail.com))**
 
 
