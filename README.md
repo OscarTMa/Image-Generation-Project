@@ -56,7 +56,7 @@ Ensure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/Image-Generation-Project.git
+   git clone https://github.com/oscartma/Image-Generation-Project.git
    cd Image-Generation-Project
    ```
 2. Install dependencies:
