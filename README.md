@@ -153,6 +153,6 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Authors
 
-- **Your Name ([Oscar Tibaduiza](mailto:oscartibaduiza@hotmail.com))**
+- **([Oscar Tibaduiza](mailto:oscartibaduiza@hotmail.com))**
 
 
